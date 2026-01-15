@@ -38,7 +38,7 @@ Since this is a Jekyll GitHub Pages site:
 
 - All content is hardcoded in HTML files
 - Images are stored in `/img/` directory
-- External links point to blog.kelvinhama.com, social media, and project repositories
+- External links point to blog.kelvinhanma.com, social media, and project repositories
 - Site uses XHTML 1.0 Transitional DOCTYPE
 
 ## Domain Configuration
