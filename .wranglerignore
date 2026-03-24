@@ -1,0 +1,17 @@
+.git/
+.wrangler/
+wrangler.jsonc
+_config.yml
+.gitmodules
+.gitignore
+CLAUDE.md
+README.md
+CNAME
+robots.txt
+sitemap.xml
+resume.pdf
+gemini-cli/.git
+gemini-cli/CLAUDE.md
+gemini-cli/README.md
+gemini-cli/.gitignore
+getschwifty/.DS_Store
