@@ -1,3 +1,4 @@
+.claude/
 .git/
 .wrangler/
 wrangler.jsonc
@@ -7,11 +8,13 @@ _config.yml
 CLAUDE.md
 README.md
 CNAME
-robots.txt
-sitemap.xml
-resume.pdf
 gemini-cli/.git
 gemini-cli/CLAUDE.md
 gemini-cli/README.md
 gemini-cli/.gitignore
 getschwifty/.DS_Store
+_notes/
+.assetsignore
+src/
+package.json
+node_modules/

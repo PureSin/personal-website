@@ -1,7 +1,13 @@
 {
   "name": "personal-website",
+  "main": "src/worker.js",
   "compatibility_date": "2026-01-02",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    // Run the Worker on every request so it can negotiate Markdown and
+    // return Markdown 404s. Static files are still served from assets.
+    "run_worker_first": true,
+    "not_found_handling": "404-page"
   }
 }
