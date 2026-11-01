@@ -18,7 +18,10 @@ This is Kelvin Ma's personal website at kelvinhanma.com. It's a hand-written sta
 - **getschwifty/** - Rick & Morty themed page
 - **gemini-cli/** - Git submodule (Gemini CLI cheatsheet); run `git submodule update --init` before deploying
 - **_notes/** - Internal notes, excluded from deploys via `.assetsignore` (Wrangler ignores `.wranglerignore`; keep private files listed in `.assetsignore`)
-- **wrangler.jsonc** - Cloudflare Workers config serving `.` as static assets
+- **404.html** - Not-found page for browsers (`not_found_handling: "404-page"`)
+- **md/** - Hand-written Markdown versions of each page plus `404.md`, served to clients that send `Accept: text/markdown`
+- **src/worker.js** - Worker that runs before assets: Markdown content negotiation, Markdown 404s, and `Vary: Accept`. Page-to-Markdown mapping lives in `MARKDOWN_PAGES`
+- **wrangler.jsonc** - Cloudflare Workers config (`run_worker_first`, `ASSETS` binding, serves `.` as static assets)
 - **_config.yml / CNAME** - Legacy GitHub Pages config
 
 ## Development Workflow
@@ -36,4 +39,6 @@ This is Kelvin Ma's personal website at kelvinhanma.com. It's a hand-written sta
 - Inline CSS in each HTML file; shared nav markup copied across pages
 - Fixed-width layout (48em), cream background (#fdf8f4), dark top border (#252421)
 - XHTML 1.0 Transitional DOCTYPE
-- When adding or removing a page, update sitemap.xml and llms.txt too
+- When adding or removing a page, update sitemap.xml, llms.txt, `md/<page>.md`, and `MARKDOWN_PAGES` in src/worker.js too
+- When editing page text, keep the matching `md/*.md` file in sync
+- Test negotiation locally: `curl -H 'Accept: text/markdown' localhost:8787/`

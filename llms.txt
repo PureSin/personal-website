@@ -18,6 +18,8 @@ Kelvin graduated from the University of Waterloo with a Bachelor of Mathematics 
 - [Cooking](https://kelvinhanma.com/cooking): Dishes Kelvin has made
 - [Résumé (PDF)](https://kelvinhanma.com/resume.pdf): Work history and education
 
+Every page above (except the PDF) returns Markdown when requested with `Accept: text/markdown`. The Markdown files are also available directly under [/md/](https://kelvinhanma.com/md/index.md).
+
 ## Projects
 
 - [Reflect](https://reflect.kelvinhanma.com/): Local-only personal journaling app with LLM integration for analysis
