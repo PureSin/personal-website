@@ -39,7 +39,7 @@ Other follow-ups:
 
 ## Deploy and hosting notes
 
-- kelvinhanma.com is a custom domain on the `personal-website` Worker (deploys go back to 2026-01-15). DNS is on Cloudflare. GitHub Pages is not enabled. `wrangler deploy` goes live immediately; use `wrangler versions upload` for a preview.
+- kelvinhanma.com is a custom domain on the `personal-website` Worker (deploys go back to 2026-01-15). DNS is on Cloudflare. GitHub Pages is not enabled. Cloudflare Workers Builds is connected to the repo: pushes to `master` deploy to production, and other branches get preview URLs (`<branch>-personal-website.kelvin-ma23.workers.dev`). Merging PR #5 deployed version `9f2ed9b9` to production. A manual `wrangler deploy` also goes live immediately.
 - **Exposure, 2026-01-15 to 2026-11-01:** `.wranglerignore` was never read by Wrangler, so production served `.git/`, `.claude/settings.local.json`, `CLAUDE.md`, `README.md`, and config files. The repo is public and the settings file had no secrets, so the impact is low. Fixed by renaming the file to `.assetsignore`; those paths now return 404 in production.
 - The 0.33 KiB `--dry-run` upload size was harmless. A dry run doesn't upload assets, so the number is only the Worker script.
 - Cloudflare 307-redirects `*.html` to extensionless paths, so the site links to `/contact` and `/cooking`.

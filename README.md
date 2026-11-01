@@ -40,16 +40,23 @@ curl -H 'Accept: text/markdown' http://localhost:8787/nope   # Markdown 404
 
 ## Deployment
 
-```bash
-wrangler deploy                 # publishes to production (kelvinhanma.com) immediately
-wrangler versions upload        # uploads a version with a preview URL, without going live
-```
+Deploys happen automatically through [Cloudflare Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/), which is connected to this GitHub repo:
 
-Merging to `master` does not deploy anything by itself.
+- **Push or merge to `master`**: builds and deploys to production (kelvinhanma.com).
+- **Push to any other branch**: uploads a preview version without going live. The build check on the commit or PR links to two URLs: one for that exact version (`https://<version-prefix>-personal-website.kelvin-ma23.workers.dev`) and one alias per branch (`https://<branch>-personal-website.kelvin-ma23.workers.dev`).
+
+To check a change before it goes live, push a branch, open a PR, and test the preview URL from the build check.
+
+Manual deploys from your machine also work, but they skip the Git flow:
+
+```bash
+wrangler deploy                 # publishes to production immediately
+wrangler versions upload        # uploads a preview version without going live
+```
 
 Before deploying:
 
-- Make sure the `gemini-cli` submodule is checked out (`git submodule update --init`). If it isn't, `/gemini-cli/` deploys empty.
+- Make sure the `gemini-cli` submodule is checked out. Workers Builds handles this for you; for manual deploys, run `git submodule update --init` first. If it isn't checked out, `/gemini-cli/` deploys empty.
 - Files that must not be public go in `.assetsignore`. That is the file Workers static assets reads; Wrangler ignores `.wranglerignore`. It currently excludes `.git/`, `.claude/`, `_notes/`, `src/`, config files, and the docs.
 
 ## Submodules
