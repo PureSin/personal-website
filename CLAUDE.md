@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is Kelvin Ma's personal website at kelvinhanma.com. It's a hand-written static site (no build step). It is being migrated from GitHub Pages to Cloudflare Workers static assets (`cloudflare-deploy` branch).
+This is Kelvin Ma's personal website at kelvinhanma.com. It's a hand-written static site (no build step). It is served by the Cloudflare Worker `personal-website` (static assets plus a small Worker), with kelvinhanma.com attached as a custom domain. DNS is on Cloudflare. GitHub Pages is not enabled.
 
 ## Site Structure
 
@@ -22,14 +22,13 @@ This is Kelvin Ma's personal website at kelvinhanma.com. It's a hand-written sta
 - **md/** - Hand-written Markdown versions of each page plus `404.md`, served to clients that send `Accept: text/markdown`
 - **src/worker.js** - Worker that runs before assets: Markdown content negotiation, Markdown 404s, and `Vary: Accept`. Page-to-Markdown mapping lives in `MARKDOWN_PAGES`
 - **wrangler.jsonc** - Cloudflare Workers config (`run_worker_first`, `ASSETS` binding, serves `.` as static assets)
-- **_config.yml / CNAME** - Legacy GitHub Pages config
+- **_config.yml / CNAME** - Leftover GitHub Pages config (unused)
 
 ## Development Workflow
 
 1. **Local**: `npx wrangler dev`, or open the HTML files directly
-2. **Deploy (Cloudflare)**: `npx wrangler deploy`
-3. **Legacy deploy (GitHub Pages)**: push to master
-4. **No build scripts**: no package.json or build process
+2. **Deploy**: `npx wrangler deploy` publishes straight to production (kelvinhanma.com), not a preview. For a preview, use `npx wrangler versions upload`
+3. **No build scripts**: no package.json or build process
 
 ## Conventions
 
