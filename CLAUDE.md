@@ -27,7 +27,7 @@ This is Kelvin Ma's personal website at kelvinhanma.com. It's a hand-written sta
 ## Development Workflow
 
 1. **Local**: `npx wrangler dev` (opening the HTML files directly breaks the extensionless nav links and skips the Worker)
-2. **Deploy**: `npx wrangler deploy` publishes straight to production (kelvinhanma.com), not a preview. For a preview, use `npx wrangler versions upload`
+2. **Deploy**: Cloudflare Workers Builds is connected to the GitHub repo. A push or merge to `master` deploys to production (kelvinhanma.com). A push to any other branch uploads a preview version; the PR's "Workers Builds" check links to its preview URL, and every branch also gets `https://<branch>-personal-website.kelvin-ma23.workers.dev`. So don't push to master or merge without the user's go-ahead, because that is a production deploy. Manual `npx wrangler deploy` also goes straight to production; `npx wrangler versions upload` makes a preview
 3. **No build scripts**: no package.json or build process
 
 ## Conventions
