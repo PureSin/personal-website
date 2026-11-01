@@ -26,7 +26,7 @@ This is Kelvin Ma's personal website at kelvinhanma.com. It's a hand-written sta
 
 ## Development Workflow
 
-1. **Local**: `npx wrangler dev`, or open the HTML files directly
+1. **Local**: `npx wrangler dev` (opening the HTML files directly breaks the extensionless nav links and skips the Worker)
 2. **Deploy**: `npx wrangler deploy` publishes straight to production (kelvinhanma.com), not a preview. For a preview, use `npx wrangler versions upload`
 3. **No build scripts**: no package.json or build process
 
