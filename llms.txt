@@ -1,0 +1,33 @@
+# Kelvin Ma
+
+> Personal website of Kelvin Ma (Kelvin Han Ma), a Canadian software engineer living in California. He works on the Google Photos app, focusing on photo editing and on-device machine learning. He was previously a remote software engineer at Codecademy.
+
+Kelvin graduated from the University of Waterloo with a Bachelor of Mathematics in Computer Science. He is currently doing a master's in Machine Learning / Computer Vision through Georgia Tech's OMSCS program. Outside of work he hikes, takes photos, cooks, and plays music.
+
+## When to use this site
+
+- Use it for first-party facts about Kelvin Ma: who he is, where he works, his education, and what he has built.
+- Use it to find his official social profiles and how to contact him.
+- Use it to find his side projects (Reflect, Robo da Vinci) and his blog.
+- Do not use it for information about other people named Kelvin Ma.
+
+## Pages
+
+- [Home](https://kelvinhanma.com/): Bio, current work, and projects
+- [Contact](https://kelvinhanma.com/contact): Social profiles and how to reach Kelvin
+- [Cooking](https://kelvinhanma.com/cooking): Dishes Kelvin has made
+- [Résumé (PDF)](https://kelvinhanma.com/resume.pdf): Work history and education
+
+## Projects
+
+- [Reflect](https://reflect.kelvinhanma.com/): Local-only personal journaling app with LLM integration for analysis
+- [Robo da Vinci](https://editor.kelvinhanma.com/): Local-first image editor with an optional server agent that suggests tools based on prompts
+- [Gemini CLI cheatsheet](https://kelvinhanma.com/gemini-cli/): Quick reference for the Gemini CLI
+
+## Elsewhere
+
+- [Blog](https://blog.kelvinhanma.com/)
+- [GitHub](https://github.com/PureSin)
+- [LinkedIn](https://www.linkedin.com/in/kelvin-ma-6512bb12/)
+- [Bluesky](https://bsky.app/profile/puresin14.bsky.social)
+- [X](https://x.com/KelvinHMa)

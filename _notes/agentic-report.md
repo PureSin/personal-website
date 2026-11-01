@@ -37,3 +37,5 @@ Full report: https://is-agentic.com/scan/kelvinhanma.com
 - Wrangler 4.76.0 is installed and logged in; `wrangler.jsonc` serves `.` as static assets.
 - `.wranglerignore` now excludes `.claude/` and no longer excludes `resume.pdf`, `robots.txt` or `sitemap.xml`.
 - A `wrangler deploy --dry-run` reported only 0.33 KiB uploaded, which looks too small. Investigate before the first real deploy.
+- 2026-11-01: `.wranglerignore` was never read by Wrangler. `wrangler dev` served `.git/config`, `.claude/settings.local.json` and `_notes/`. Renamed it to `.assetsignore`, the file Workers static assets actually read; those paths now return 404. The 0.33 KiB dry-run size is just the empty Worker script, because assets aren't uploaded during a dry run.
+- 2026-11-01: Cloudflare redirects `*.html` to extensionless paths (307), so canonical links, the nav, the sitemap and llms.txt now use `/contact` and `/cooking`.

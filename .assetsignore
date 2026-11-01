@@ -14,3 +14,4 @@ gemini-cli/README.md
 gemini-cli/.gitignore
 getschwifty/.DS_Store
 _notes/
+.assetsignore

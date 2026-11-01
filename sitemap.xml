@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://KelvinHanMa.com/</loc>
+    <loc>https://kelvinhanma.com/</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
-    <loc>https://KelvinHanMa.com/assistant.html</loc>
+    <loc>https://kelvinhanma.com/contact</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
-    <loc>https://KelvinHanMa.com/contact.html</loc>
+    <loc>https://kelvinhanma.com/cooking</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
-    <loc>https://KelvinHanMa.com/cooking.html</loc>
+    <loc>https://kelvinhanma.com/gemini-cli/</loc>
   </url>
   <url>
-    <loc>https://KelvinHanMa.com/getschwifty/</loc>
+    <loc>https://kelvinhanma.com/getschwifty/</loc>
   </url>
   <url>
-    <loc>https://KelvinHanMa.com/resume.pdf</loc>
+    <loc>https://kelvinhanma.com/resume.pdf</loc>
   </url>
   <url>
-    <loc>https://blog.kelvinhanma.com/</loc>
-  </url>
-  <url>
-    <loc>https://reflect.kelvinhanma.com/</loc>
+    <loc>https://kelvinhanma.com/llms.txt</loc>
+    <lastmod>2026-11-01</lastmod>
   </url>
 </urlset>
